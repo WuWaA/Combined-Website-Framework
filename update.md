@@ -15,7 +15,8 @@ after start the server, to view the website: http://localhost/
 2. update configs and test if framework is running correctly.
    更新配置并测试该框架的可用性。
 
-3. [TODO] "Could not find constructor in registry for MDCDrawer"
+3. [TODO] "Could not find constructor in registry for MDCDrawer".
+   [待办] 修复MDCDrawer的问题。
 
 2019.08.28
 
