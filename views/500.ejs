@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error</title>
+</head>
+<body>
+<h1>An error occurred!</h1>
+<h2>Error: <%= error.message %></h2>
+<% if (settings['verbose errors']) { %>
+  <pre><%= error.stack %></pre>
+<% } else { %>
+  <p>An error occurred!</p>
+<% } %>
+</body>
+</html>

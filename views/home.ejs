@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="York University">
+    <meta name="author" content="Pseudo">
+    <link rel="stylesheet" href="material-icons.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>用户认证</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">导航栏</span>
+                        <span class="icon-bar">待定1</span>
+                        <span class="icon-bar">待定2</span>
+                        <span class="icon-bar">待定3</span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <% if (user) { %>
+                            <p class="navbar-text">
+                                <strong>嗨，</strong>
+                                <!--<img src="<%= user.avatar %>" width="20" height="20">-->
+                                <%= user.username %>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/logout">登出</a>
+                        </li>
+                        <% } else { %>
+                            <a href="/signin">登录</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <% if (error) { %>
+        <p class="alert alert-warning"><%= error %></p>
+        <% } %>
+
+        <% if (success) { %>
+        <p class="alert alert-success"><%= success %></p>
+        <% } %>
+
+        <% if (notice) { %>
+        <p class="alert alert-info"><%= notice %></p>
+        <% } %>
+
+        <% if (user) { %>
+        <div class="jumbotron">
+            <h1>用户认证</h1>
+            <p>你的个人信息如下</p>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">个人信息</h3>
+            </div>
+            <div class="panel-body">
+                <p>用户名: <%= user.username %></p>
+                <!--<p>头像: <img src="<%= user.avatar %>" /></p>-->
+            </div>
+        </div>
+        <% } else { %>
+        <div class="jumbotron">
+            <h1>用户认证</h1>
+            <p>登录以查看用户信息</p>
+            <p>
+                <a href="/signin" class="btn btn-primary btn-lg" role="button">
+                    <span class="glyphicon glyphicon-user">?</span>登录
+                </a>
+            </p>
+        </div>
+        <% } %>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>

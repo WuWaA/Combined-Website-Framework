@@ -1,0 +1,82 @@
+{
+    "C": [
+        [
+            "C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners. C is a general-purpose coding language, originally created for Unix systems. It’s commonly used in cross-platform systems, Unix coding and game coding. It’s often selected because it’s more compact than C++ and runs faster. It’s the second most common programming language following Java."
+        ],
+        [
+            "c.png"
+        ]
+    ],
+    "C++": [
+        [
+            "C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on. C++ supports different ways of programming like procedural, object-oriented, functional, and so on. This makes C++ powerful as well as flexible. C++ is an intermediate-level coding language that is object-oriented. It derives from C, however, it has add-ons and enhancements to make it a more multifaceted coding language. It’s well suited to large projects, as it can be broken up into parts enabling easy collaboration. It’s used by some of the world’s best-known tech companies including Adobe, Google, Mozilla, and Microsoft."
+        ],
+        [
+            "cpp.png"
+        ]
+    ],
+    "C#": [
+        [
+            "C# is a general-purpose, object-oriented programming language. It is one of the most popular languages used for developing desktop and web applications. Being a C based language, C# is closer to C++ and C. Syntactically, it is similar to Java. A general purpose, object-oriented code, C# (pronounced C Sharp) was created by Microsoft in 2001. C# is mostly used for internal/enterprise solutions and is less frequent in commercial software."
+        ],
+        [
+            "cs.png"
+        ]
+    ],
+    "Golang": [
+        [
+            "Golang, is an open source programming language. It’s statically typed and produces compiled machine code binaries. Developers say that Google’s Go language is the C for the twenty-first century when it comes to syntax. However, this new programming language includes tooling that allows you to safely use memory, manage objects, collect garbage etc. Go was developed by Google to be an efficient, readable, and secure language for system-level programming. It works well for distributed systems, in which systems are located on different networks and need to communicate by sending messages to each other. While it is a relatively new language, Go has a large standards library and extensive documentation."
+        ],
+        [
+            "go.png"
+        ]
+    ],
+    "Java": [
+        [
+            "Java is a powerful general-purpose programming language. It is used to develop desktop and mobile applications, big data processing, embedded systems, and so on. According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most popular programming languages. Java is currently the most popular and widely used language in the world. Though it was originally created for interactive TV, it’s become known as the language of choice for Android devices. It’s also the coding language of choice enterprise-level software. It’s a good multi-purpose coding language because it can be used cross-platform (meaning it’s just as easily used on smartphone apps as on desktop apps)."
+        ],
+        [
+            "java.png"
+        ]
+    ],
+    "JavaScript": [
+        [
+            "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it. JavaScript was created as an add-on code to extend the functionality of web pages. It adds dynamic features such as submission forms, interactivity, animations, user-tracking, etc. It’s mostly used for front-end development, or for coding solutions that customers and clients interact with. It’s compatible with all browsers, making it a good general-purpose web development code, though it’s also known to be difficult to debug."
+        ],
+        [
+            "js.png"
+        ]
+    ],
+    "Kotlin": [
+        [
+            "Kotlin is a relatively new programming language developed by JetBrains for modern multiplatform applications. Nowadays, Kotlin is widely used for Android development instead of Java. It is because Kotlin is safe, concise, and fun to read and write. Kotlin is used to develop applications for the Android OS."
+        ],
+        [
+            "kotlin.png"
+        ]
+    ],
+    "Python": [
+        [
+            "Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Python is a favourite of up and coming coders. It was designed to be fun to use (after all, it’s named for Monty Python, how could it not be?) It’s another highly recommended language for coding beginners to learn – and has become the top introductory coding language in American university programs. It’s used mostly for web apps and information security, though it’s also popular in the academic community for data analysis. It’s used by tech giants like Google, Dropbox, Pinterest and Spotify."
+        ],
+        [
+            "python.png"
+        ]
+    ],
+    "Ruby": [
+        [
+            "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. Ruby is an object-oriented, general purpose programming language developed in the mid-90s in Japan. It’s one of the simpler programming languages to learn and is often used as a stepping stone to Ruby on Rails. It was developed to be both fun to code, and to increase productivity. It’s known for being easy to read, and as a result many programmers recommend learning Ruby as your first coding language. It’s used by sites like Hulu, Shopify, Airbnb and many others."
+        ],
+        [
+            "ruby.png"
+        ]
+    ],
+    "Rust": [
+        [
+            "Rust is a multi-paradigm programming language focused on performance and safety, especially safe concurrency. Rust is syntactically similar to C++, but provides memory safety without using garbage collection. Rust emphasizes high performance and security and is useful for applications where many things are happening concurrently."
+        ],
+        [
+            "rust.png"
+        ]
+    ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="York University">
+    <meta name="author" content="Pseudo">
+    <link rel="stylesheet" href="material-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>York University</title>
+</head>
+<body>
+    <aside class="mdc-drawer mdc-drawer--dismissible" data-mdc-auto-init="MDCDrawer">
+        <div class="mdc-drawer__content">
+            <div class="mdc-list" data-mdc-auto-init="MDCList">
+                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Some Function</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Some Function</span>
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-list-item__text">Some Function</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <div class="mdc-drawer-app-content">
+        <header class="mdc-top-app-bar app-bar" data-mdc-auto-init="MDCTopAppBar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                    <span class="mdc-top-app-bar__title">Menu</span>
+                </section>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="mdc-top-app-bar--fixed-adjust">
+                <div class="sub-content">
+                    <div class="logo">
+                        <img class="logo" src="images/logo.png">
+                    </div>
+                    <div class="search-area">
+                        <form action="/question" method="POST">
+                            <div class="text-field-container">
+                                <div class="mdc-text-field text-field mdc-text-field--fullwidth mdc-text-field--textarea" data-mdc-auto-init="MDCTextField">
+                                    <div class="mdc-text-field-character-counter">0 / 20</div>
+                                    <!--<i class="material-icons mdc-text-field__icon">search</i>--><!--Search Icon-->
+                                    <textarea class="mdc-text-field__input" maxlength="20" name="question"></textarea>
+                                    <div class="mdc-notched-outline mdc-notched-outline--upgraded" data-mdc-auto-init="MDCNotchedOutline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label class="mdc-floating-label" data-mdc-auto-init="MDCFloatingLabel">Search</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                    <div class="mdc-line-ripple" data-mdc-auto-init="MDCLineRipple"></div>
+                                </div>
+                            </div>
+                            <!--<input type="text" name="question" />--><!--旧搜索-->
+                            </br>
+                            <button type="submit" class="mdc-button mdc-button--raised">
+                                <span class="mdc-button__label">Search Again</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="result-area">
+                        <p>包含“ <b><%= input %></b> ”的结果</p></br>
+                        <%- html_code %>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>

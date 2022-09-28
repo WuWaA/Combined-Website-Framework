@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="York University">
+    <meta name="author" content="Pseudo">
+    <link rel="stylesheet" href="material-icons.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>用户认证</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <% if (user) { %>
+                            <p class="navbar-text">
+                                <strong>嗨，</strong>
+                                <%= user.username %>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/logout">登出</a>
+                        </li>
+                        <% } else { %>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <% if (error) { %>
+        <p class="alert alert-warning"><%= error %></p>
+        <% } %>
+
+        <% if (success) { %>
+        <p class="alert alert-success"><%= success %></p>
+        <% } %>
+
+        <% if (notice) { %>
+        <p class="alert alert-info"><%= notice %></p>
+        <% } %>
+
+        <div class="jumbotron">
+            <% if (user) { %>
+                <h1>您已登录</h1>
+                <p></p>
+                <a class="mdc-button mdc-button--raised" id="signined" href="/">搜索</a>
+            <% } else { %>
+            <h1>登录</h1>
+            <form id="local-signin" action="/signin" method="post">
+                <div>
+                    <p></p>
+                    <label>用户名:</label>
+                    <input type="text" name="username" />
+                </div>
+                <div>
+                    <label>密　码:</label>
+                    <input type="password" name="password" />
+                </div>
+                <div>
+                    <input type="submit" class="mdc-button mdc-button--raised" value="登录" />
+                </div>
+            </form>
+            <br>
+            <h1>注册</h1>
+            <form id="local-signup" action="/signup" method="post">
+                <div>
+                    <p></p>
+                    <label>用户名:</label>
+                    <input type="text" name="username" />
+                </div>
+                <div>
+                    <label>密　码:</label>
+                    <input type="password" name="password" />
+                </div>
+                <div>
+                    <input type="submit" class="mdc-button mdc-button--raised" value="注册" />
+                </div>
+            </form>
+            <% } %>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>

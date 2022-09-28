@@ -1,0 +1,67 @@
+//@import "@material/list/mdc-list";
+//@import "@material/button/mdc-button";
+//@import "@material/drawer/mdc-drawer";
+//@import "@material/textfield/mdc-text-field";
+//@import "@material/textfield/icon/mdc-text-field-icon";
+@import "material-components-web/material-components-web";
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0vh;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 400px;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.sub-content {
+  padding: 20px 10% 0px 10%;
+}
+
+.result-area {
+  max-width: 100%;
+  font-size: 1em;
+}
+
+.result-question {
+  color: #333;
+}
+
+.result-image {
+  max-width: 50%;
+  padding: 0 25%;
+  margin: 0 auto;
+}
+
+.result-answer {
+  color: #000;
+}
+
+.result-method {
+  color: rgb(0, 36, 0);
+}
+
+.app-bar {
+  position: absolute;
+}
+
+.mdc-top-app-bar {
+  z-index: 7;
+}
+
+#signined {
+  color: white;
+}
