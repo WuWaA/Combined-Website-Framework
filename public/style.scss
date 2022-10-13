@@ -1,8 +1,3 @@
-//@import "@material/list/mdc-list";
-//@import "@material/button/mdc-button";
-//@import "@material/drawer/mdc-drawer";
-//@import "@material/textfield/mdc-text-field";
-//@import "@material/textfield/icon/mdc-text-field-icon";
 @import "material-components-web/material-components-web";
 
 body {
@@ -11,9 +6,15 @@ body {
   margin: 0vh;
 }
 
-textarea {
-  min-height: 100px;
-  max-height: 400px;
+.custom-textarea {
+  min-height: 100px !important;
+  max-height: 1000px !important;
+  min-width: 400px !important;
+  max-width: 1000px !important;
+}
+
+.custom-counter {
+  margin-right: 8px !important;
 }
 
 .mdc-drawer-app-content {
@@ -36,7 +37,7 @@ textarea {
   font-size: 1em;
 }
 
-.result-question {
+.result-name {
   color: #333;
 }
 
@@ -46,12 +47,8 @@ textarea {
   margin: 0 auto;
 }
 
-.result-answer {
+.result-description {
   color: #000;
-}
-
-.result-method {
-  color: rgb(0, 36, 0);
 }
 
 .app-bar {

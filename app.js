@@ -105,12 +105,12 @@ passport.use('local-signup', new LocalStrategy({
 ));
 
 passport.serializeUser(function (user, done) {
-    console.log("serializing " + user.username);
+    console.log("Serializing " + user.username);
     done(null, user);
 });
 
 passport.deserializeUser(function (obj, done) {
-    console.log("deserializing " + obj);
+    console.log("Deserializing " + obj);
     done(null, obj);
 });
 

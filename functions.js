@@ -18,7 +18,7 @@ exports.localReg = function (username, password) {
             if (nameErr) console.log(nameErr);
             if (collectionInfos.length === 0) db.createCollection('users', function (createErr, res) {
                 if (createErr) console.log(createErr);
-                console.log("\nCollection created!");
+                console.log("Collection created!");
             })
         });
         var collection = db.collection('users');
@@ -62,7 +62,7 @@ exports.localAuth = function (username, password) {
         db.listCollections({ name: 'users' }).toArray(function (nameErr, collectionInfos) {
             console.log(collectionInfos);
             if (nameErr) console.log(nameErr);
-            if (collectionInfos.length === 0) console.log('\nCollection Not Exist!');
+            if (collectionInfos.length === 0) console.log('Collection Not Exist!');
         });
         var collection = db.collection('users');
         collection.findOne({

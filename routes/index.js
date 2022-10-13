@@ -107,7 +107,6 @@ router.get('/question', passport.authenticateMiddleware(), function (req, res) {
 router.post('/signup', passport.authenticate('local-signup', {
   successRedirect: '/search',
   failureRedirect: '/signin'
-  //failureFlash: '注册失败，请联系管理员'
 }));
 
 // sends the request through local signin strategy
@@ -116,7 +115,6 @@ router.post('/signup', passport.authenticate('local-signup', {
 router.post('/signin', passport.authenticate('local-signin', {
   successRedirect: '/search',
   failureRedirect: '/signin'
-  //failureFlash: 'Incorrect username or password'
 }));
 
 router.post('/question', passport.authenticateMiddleware(), function (req, res) {
@@ -132,40 +130,23 @@ router.post('/question', passport.authenticateMiddleware(), function (req, res) 
   var content_length = Object.keys(content).length;
   console.log("Input Length: " + input_length);
   console.log("Content Length: " + content_length);
-  /* Traversal Contents */
-  for (var i = 0; i < content; i++) {
-    console.log(content[i][0]); // test
-    // var index = i + 1;
-    // basic exception handle
-    // if (content[index] === undefined) {
-    //   break;
-    // }
-    // if input length is [1,20], full match
-    // if (input_length >= 1 && input_length <= 20) {
-    //   var search_length = content[index][0].length - input_length;
-    //   for (var j = 0; j < search_length; j++) {
-    //     if (input === content[index][0].substr(j, j + input_length).toLowerCase()) {
-    //       description.push(content[index][0]);
-    //       image.push(content[index][1]);
-    //       break;
-    //     }
-    //   }
-    // }
-    // if input length too short or too long, refuse to search
-    // else {
-      // front-end tells user input invalid, and back-end does nothing
-    // }
+
+  // basic exception handling
+  if (content[input] !== undefined && input_length >= 1 && input_length <= 20) {
+    description.push(content[input][0]);
+    image.push(content[input][1]);
   }
 
+  // if input length too short or too long, refuse to search
+  // front-end tells user input invalid, and back-end does nothing
+
   var html_code = "";
-  for (var i = 0; i < question.length; i++) {
     html_code += '<hr>';
-    html_code += '<p class="result-number">' + (i + 1) + '.</p>';
-    html_code += '<p class="result-question">介绍: ' + description[i] + '</p><br>';
-    if (image[i] != '') html_code += '<img class="result-image" src="' + '/images/' + image[i] + '"><br>';
-  }
+    html_code += '<p class="result-name">' + input.toUpperCase() + '</p>';
+    html_code += '<p class="result-description">Description: ' + description[0] + '</p><br>';
+    if (image[0] != '') html_code += '<img class="result-image" src="' + '/images/' + image[0] + '"><br>';
   res.render('question', {
-    input: input,
+    input: input.toUpperCase(),
     html_code: html_code
   });
 })

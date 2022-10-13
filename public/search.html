@@ -11,6 +11,7 @@
     <title>York University</title>
 </head>
 <body>
+    <!-- https://material.io/components/navigation-drawer/web -->
     <aside class="mdc-drawer mdc-drawer--dismissible" data-mdc-auto-init="MDCDrawer">
         <div class="mdc-drawer__content">
             <div class="mdc-list" data-mdc-auto-init="MDCList">
@@ -47,14 +48,14 @@
                     <div class="search-area">
                         <form action="/question" method="POST">
                             <div class="text-field-container">
-                                <div class="mdc-text-field text-field mdc-text-field--fullwidth mdc-text-field--textarea" data-mdc-auto-init="MDCTextField">
-                                    <div class="mdc-text-field-character-counter">0 / 20</div>
+                                <div class="mdc-text-field text-field mdc-text-field--fullwidth mdc-text-field--textarea custom-textarea" data-mdc-auto-init="MDCTextField">
+                                    <div class="mdc-text-field-character-counter custom-counter">0 / 20</div>
                                     <!--<i class="material-icons mdc-text-field__icon">search</i>--><!--Search Icon-->
                                     <textarea class="mdc-text-field__input" maxlength="20" name="question"></textarea>
                                     <div class="mdc-notched-outline mdc-notched-outline--upgraded" data-mdc-auto-init="MDCNotchedOutline">
                                         <div class="mdc-notched-outline__leading"></div>
                                         <div class="mdc-notched-outline__notch">
-                                            <label class="mdc-floating-label" data-mdc-auto-init="MDCFloatingLabel">Search Programming Language By Name Or Feature</label>
+                                            <label class="mdc-floating-label" data-mdc-auto-init="MDCFloatingLabel">Input A Programming Language Name</label>
                                         </div>
                                         <div class="mdc-notched-outline__trailing"></div>
                                     </div>

@@ -10,6 +10,17 @@ use "npm run server" to run the server.
 after server start, to view the website: http://localhost/
 服务器启动后，查看网站: http://localhost/
 
+2022.10.12
+
+1. translate text to english.
+   将文本翻译成英文。
+
+2. finish demo search function.
+   完成示例的搜索功能。
+
+3. fix some wrong style.
+   修复了一些错误布局。
+
 2022.09.27
 
 1. update major version to latest for all dependencies.

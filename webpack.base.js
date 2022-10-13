@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx$|\.es6$|\.js$/,
                 use: {
                     loader: 'babel-loader'
                 },
@@ -35,7 +35,7 @@ module.exports = {
                         loader: "sass-loader",
                         options: {
                             sassOptions: {
-                                includePaths: [path.resolve('./node_modules')]
+                                includePaths: [path.resolve('./node_modules'), path.resolve('./public')]
                             }
                         }
                     }]

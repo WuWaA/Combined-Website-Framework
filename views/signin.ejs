@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="material-icons.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>用户认证</title>
+    <title>User Authentication</title>
 </head>
 <body>
     <div class="container">
@@ -20,14 +20,14 @@
                         <li>
                             <% if (user) { %>
                             <p class="navbar-text">
-                                <strong>嗨，</strong>
+                                <strong>Hi, </strong>
                                 <%= user.username %>
                             </p>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="/logout">登出</a>
+                            <a href="/logout">Sign Out</a>
                         </li>
                         <% } else { %>
                         </li>
@@ -51,39 +51,39 @@
 
         <div class="jumbotron">
             <% if (user) { %>
-                <h1>您已登录</h1>
+                <h1>Your Are Signed In</h1>
                 <p></p>
-                <a class="mdc-button mdc-button--raised" id="signined" href="/">搜索</a>
+                <a class="mdc-button mdc-button--raised" id="signined" href="/">Search</a>
             <% } else { %>
-            <h1>登录</h1>
+            <h1>Sign In</h1>
             <form id="local-signin" action="/signin" method="post">
                 <div>
                     <p></p>
-                    <label>用户名:</label>
+                    <label>Username:</label>
                     <input type="text" name="username" />
                 </div>
                 <div>
-                    <label>密　码:</label>
+                    <label>Password:</label>
                     <input type="password" name="password" />
                 </div>
                 <div>
-                    <input type="submit" class="mdc-button mdc-button--raised" value="登录" />
+                    <input type="submit" class="mdc-button mdc-button--raised" value="Sign In" />
                 </div>
             </form>
             <br>
-            <h1>注册</h1>
+            <h1>Sign Up</h1>
             <form id="local-signup" action="/signup" method="post">
                 <div>
                     <p></p>
-                    <label>用户名:</label>
+                    <label>Username:</label>
                     <input type="text" name="username" />
                 </div>
                 <div>
-                    <label>密　码:</label>
+                    <label>Password:</label>
                     <input type="password" name="password" />
                 </div>
                 <div>
-                    <input type="submit" class="mdc-button mdc-button--raised" value="注册" />
+                    <input type="submit" class="mdc-button mdc-button--raised" value="Sign Up" />
                 </div>
             </form>
             <% } %>

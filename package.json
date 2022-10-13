@@ -1,21 +1,15 @@
 {
   "name": "project-pseudo",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "webpack --mode production --stats-modules --stats-chunks --config ./webpack.base.js",
-    "watch": "webpack --watch --mode production --stats-modules --stats-chunks --config ./webpack.base.js",
-    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development --stats-modules --stats-chunks --config ./webpack.base.js",
     "server": "node ./bin/www"
   },
   "dependencies": {
     "@babel/core": "*7.19.3",
     "@babel/preset-env": "*7.19.3",
-    "@material/button": "*14.0.0",
-    "@material/drawer": "*14.0.0",
-    "@material/ripple": "*14.0.0",
-    "@material/textfield": "*14.0.0",
-    "@material/top-app-bar": "*14.0.0",
     "babel": "*6.23.0",
     "babel-core": "*6.26.3",
     "babel-loader": "*8.2.5",

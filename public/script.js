@@ -1,8 +1,3 @@
-//import { MDCRipple } from '@material/ripple';
-import { MDCDrawer } from "@material/drawer";
-//import { MDCTextField } from '@material/textfield';
-//import { MDCTopAppBar } from '@material/top-app-bar';
-//import { MDCTextFieldIcon } from '@material/textfield/icon';
 import * as mdc from 'material-components-web';
 
 var list;
@@ -42,8 +37,7 @@ if ($('.mdc-notched-outline').length != 0) {
 
 var drawer;
 if ($('.mdc-drawer').length != 0) {
-    // drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-    drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    drawer = new mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 }
 
 var topappbar;
